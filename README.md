@@ -23,31 +23,31 @@ Visto che dimentico sempre qualcosa, decido di appuntarmi tutto ciò che manca i
 
 3- Vado al supermercato più vicino con la lista
 	a. SE il supermercato è aperto (vado al punto 4)
-	b. ALTRIMENTI il supermercato è chiuso (vado al supermercato più vicino in cui non sono già stato)
+	b. ALTRIMENTI il supermercato non è aperto (vado al supermercato più vicino in cui non sono già stato)
 					c. SE il supermercato è aperto -> (vado al punto 4)
 					d. ALTRIMENTI il supermercato non è aperto -> (vado al punto 3b)
-									e. SE nessun supermercato in cui sono già stato è aperto -> (vado a fine)
+									e. SE ho controllato tutti i supermercati vicino a me e nessun supermercato in cui sono già stato è aperto -> (vado a fine)
 
 4- Prendo il carrello (ne prendo un altro se uno è pieno)
 	a. SE il carrello è presente (vado al punto 5)
 	b. ALTRIMENTI il carrello è assente (vado a prendere un cestino) 
 					c. SE il cestino è presente (vado al punto 5)
-					d. ALTRIMENTI il cestino è assente -> (utilizzerò una busta in vendita per contenere i prodotti)
+					d. ALTRIMENTI il cestino è assente -> (vado a prendere una busta in vendita per contenere i prodotti)
 									e. SE la busta è presente (vado al punto 5)
 									f. SE la busta non è presente (vado a FINE)
 
-5- Seguendo la lista recupero i prodotti uno alla volta e spuntando i prodotti messi nel "contenitore" (partendo da dove ero rimasto)
-        a. SE il prodotto è presente nel supermercato (aggiungo al "contenitore") -> (vado al punto 5)
+5- Seguendo la lista recupero i prodotti uno alla volta spuntando i prodotti messi nel "contenitore" (partendo da dove ero rimasto)
+        a. SE il prodotto è presente nel supermercato -> (vado al punto 6)
 					c. SE il "contenitore" è pieno -> (vado al punto 4)
 					d. ALTRIMENTI il "contenitore" non è pieno -> (vado al punto 6)
 
-        b. ALTRIMENTI il prodotto non è presente nel supermercato (vado al punto 5)
-					e. SE ho recuperato tutti gli altri prodotti in lista -> (vado al punto 6)
-					f. SE non ho recuperato tutti gli altri prodotti in lista -> (vado al punto 5)
+        b. ALTRIMENTI il prodotto non è presente nel supermercato (vado al punto 6c/d)
 
-6- Controllo di aver preso tutti i prodotti spuntati sulla lista
-	a. SE mancano dei prodotti spuntati (vado al punto 5)
-	b. ALTRIMENTI non mancano dei prodotti spuntati (vado al punto 7)
+6- Aggiungo al "contenitore" 
+        a. SE il contenitore è pieno -> ( vado al punto 4)
+        b. ALTRIMENTI il contenitore non è pieno -> (vado al punto 6c/d)
+                    c. SE ho completato la lista (vado al punto 7)
+	                d. ALTRIMENTI non ho completato la lista (vado al punto 5)
 
 7- Compro snack extra
 	a. SE gli snack sono presenti (vado al punto 8)
